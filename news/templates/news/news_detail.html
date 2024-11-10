@@ -1,0 +1,82 @@
+{% extends 'news/base.html' %}
+{% load static %}
+{% load custom_filters %}
+
+{% load i18n %}  <!-- Tərcümə üçün i18n yüklənir -->
+<link rel="stylesheet" href="{% static 'css/news_detail_style.css' %}">
+
+{% block title %}{% trans "Xəbər Detalları" %}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row">
+        <div class="col-md-8">
+            <h1 class="news-title">{{ news.title }}</h1>
+            <p>{{ news.hook }}</p>
+            <img src="{{ news.image.url }}" class="img-fluid" alt="{{ news.title }}">
+            <!-- Burada safe filtresindən istifadə edildi -->
+            <p>{{ news.content|custom_strip|safe|default:"" }}</p>
+        </div>
+    </div>
+</div>
+
+<div class="row mb-5">
+    {% for news in page_obj %}
+    <!-- Xəbərlərin göstərilməsi burada olacaq -->
+    {% endfor %}
+</div>
+
+<!-- Pagination -->
+{% if page_obj.has_other_pages %}
+<nav aria-label="{% trans "Pagination Navigation" %}">
+    <ul class="pagination justify-content-center">
+        <!-- Əvvəlki Səhifə Keçidi -->
+        {% if page_obj.has_previous %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.previous_page_number }}" aria-label="{% trans "Əvvəlki" %}">
+                <span aria-hidden="true">&laquo; {% trans "Əvvəlki" %}</span>
+            </a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <span class="page-link">&laquo; {% trans "Əvvəlki" %}</span>
+        </li>
+        {% endif %}
+
+        <!-- Səhifə Nömrələri -->
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+            <li class="page-item active">
+                <span class="page-link">{{ num }}</span>
+            </li>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+            <li class="page-item">
+                <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+            </li>
+            {% endif %}
+        {% endfor %}
+
+        <!-- Növbəti Səhifə Keçidi -->
+        {% if page_obj.has_next %}
+        <li class="page-item">
+            <a class="page-link" href="?page={{ page_obj.next_page_number }}" aria-label="{% trans "Növbəti" %}">
+                <span aria-hidden="true">{% trans "Növbəti" %} &raquo;</span>
+            </a>
+        </li>
+        {% else %}
+        <li class="page-item disabled">
+            <span class="page-link">{% trans "Növbəti" %} &raquo;</span>
+        </li>
+        {% endif %}
+    </ul>
+</nav>
+{% endif %}
+
+<div class="social-share">
+    <span>{% trans "Paylaş" %}:</span>
+    <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="btn btn-sm btn-primary">Facebook</a>
+    <a href="https://twitter.com/share?url={{ request.build_absolute_uri }}&text={{ news.title }}" target="_blank" class="btn btn-sm btn-info">Twitter</a>
+    <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}&title={{ news.title }}" target="_blank" class="btn btn-sm btn-secondary">LinkedIn</a>
+</div>
+
+{% endblock %}

@@ -1,0 +1,126 @@
+/* General Content Styling */
+.container {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/* News Title and Content Styling */
+h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+img.img-fluid {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Social Share Buttons */
+.social-share {
+    margin-top: 25px;
+    text-align: left;
+}
+
+.social-share span {
+    display: inline-block;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+.social-share a {
+    margin-right: 5px;
+    text-decoration: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.social-share a.btn-primary {
+    background-color: #3b5998; /* Facebook color */
+}
+
+.social-share a.btn-info {
+    background-color: #1da1f2; /* Twitter color */
+}
+
+.social-share a.btn-secondary {
+    background-color: #0077b5; /* LinkedIn color */
+}
+
+/* Pagination Styling */
+.pagination {
+    margin-top: 30px;
+    justify-content: center;
+}
+
+.page-item .page-link {
+    color: #007bff;
+    padding: 8px 12px;
+    margin: 0 3px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-item .page-link:hover {
+    background-color: #f4f4f4;
+    color: #0056b3;
+}
+
+.page-item.active .page-link {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.page-item.disabled .page-link {
+    color: #aaa;
+    pointer-events: none;
+    background-color: #f0f0f0;
+}
+
+/* Responsive Design for News Detail */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    p {
+        font-size: 0.95rem;
+        line-height: 1.5;
+    }
+
+    .social-share a {
+        padding: 4px 8px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    .social-share {
+        text-align: center;
+    }
+
+    .social-share span {
+        display: block;
+        margin-bottom: 8px;
+    }
+}

@@ -1,0 +1,28 @@
+{% extends 'news/base.html' %}
+{% load i18n %}
+
+{% block title %}{% trans "Reklam" %}{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <h2>{% trans "Reklamlar" %}</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/150x150" class="card-img-top img-fluid" alt="{% trans 'Reklam 1' %}">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="#">{% trans "Reklam 1" %}</a></h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="https://via.placeholder.com/150x150" class="card-img-top img-fluid" alt="{% trans 'Reklam 2' %}">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="#">{% trans "Reklam 2" %}</a></h5>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

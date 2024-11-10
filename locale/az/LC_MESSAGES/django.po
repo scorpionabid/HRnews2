@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: az\n"
+
+#: templates/base.html
+msgid "Əsas Xəbərlər"
+msgstr "Əsas Xəbərlər"
+
+#: templates/base.html
+msgid "Kateqoriyalar"
+msgstr "Kateqoriyalar"
+
+#: templates/base.html
+msgid "İnsan Resursları"
+msgstr "İnsan Resursları"
+
+#: templates/base.html
+msgid "Təlimlər"
+msgstr "Təlimlər"
+
+#: templates/base.html
+msgid "Görüşlər"
+msgstr "Görüşlər"
+
+#: templates/base.html
+msgid "Vakansiyalar"
+msgstr "Vakansiyalar"
+
+#: templates/base.html
+msgid "Dünya"
+msgstr "Dünya"
+
+#: templates/base.html
+msgid "Texnologiya"
+msgstr "Texnologiya"
+
+#: templates/base.html
+msgid "Biznes"
+msgstr "Biznes"
+
+#: templates/base.html
+msgid "Son xəbər: İş elanları üzrə yeni vakansiyalar yayımlandı!"
+msgstr "Son xəbər: İş elanları üzrə yeni vakansiyalar yayımlandı!"
+
+#: templates/base.html
+msgid "Təlimlər başladı: Şirkətlər üçün yeni təlim paketləri təqdim olunur!"
+msgstr "Təlimlər başladı: Şirkətlər üçün yeni təlim paketləri təqdim olunur!"
+
+#: templates/base.html
+msgid "Dünya xəbərləri: Beynəlxalq şirkətlər əmək bazarında mövqelərini gücləndirir."
+msgstr "Dünya xəbərləri: Beynəlxalq şirkətlər əmək bazarında mövqelərini gücləndirir."
+
+#: templates/base.html
+msgid "Əməkdaş Şirkətlər"
+msgstr "Əməkdaş Şirkətlər"
+
+#: templates/base.html
+msgid "Yuxarı"
+msgstr "Yuxarı"
+
+#: templates/index.html
+msgid "Kateqoriya üzrə xəbərlər"
+msgstr "Kateqoriya üzrə xəbərlər"
+
+#: templates/news_detail.html
+msgid "Xəbər Detalları"
+msgstr "Xəbər Detalları"
+
+#: templates/news_detail.html
+msgid "Əvvəlki"
+msgstr "Əvvəlki"
+
+#: templates/news_detail.html
+msgid "Növbəti"
+msgstr "Növbəti"
+
+#: templates/news_detail.html
+msgid "Paylaş"
+msgstr "Paylaş"
+
+#: templates/category_list.html
+msgid "Xəbərlər"
+msgstr "Xəbərlər"
+
+#: templates/category_list.html
+msgid "Bu kateqoriyada heç bir xəbər tapılmadı."
+msgstr "Bu kateqoriyada heç bir xəbər tapılmadı."
+
+#: templates/reklam.html
+msgid "Reklam"
+msgstr "Reklam"
+
+#: templates/reklam.html
+msgid "Elanlar"
+msgstr "Elanlar"

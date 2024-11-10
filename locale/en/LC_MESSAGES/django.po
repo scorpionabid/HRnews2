@@ -1,0 +1,96 @@
+msgid ""
+msgstr ""
+"Content-Type: text/plain; charset=UTF-8\n"
+"Language: en\n"
+
+#: templates/base.html
+msgid "Əsas Xəbərlər"
+msgstr "Main News"
+
+#: templates/base.html
+msgid "Kateqoriyalar"
+msgstr "Categories"
+
+#: templates/base.html
+msgid "İnsan Resursları"
+msgstr "Human resources"
+
+#: templates/base.html
+msgid "Təlimlər"
+msgstr "Trainings"
+
+#: templates/base.html
+msgid "Görüşlər"
+msgstr "Meetings"
+
+#: templates/base.html
+msgid "Vakansiyalar"
+msgstr "Vacancies"
+
+#: templates/base.html
+msgid "Dünya"
+msgstr "World"
+
+#: templates/base.html
+msgid "Texnologiya"
+msgstr "Technology"
+
+#: templates/base.html
+msgid "Biznes"
+msgstr "Business"
+
+#: templates/base.html
+msgid "Son xəbər: İş elanları üzrə yeni vakansiyalar yayımlandı!"
+msgstr "Latest news: New job vacancies have been announced!"
+
+#: templates/base.html
+msgid "Təlimlər başladı: Şirkətlər üçün yeni təlim paketləri təqdim olunur!"
+msgstr "Trainings started: New training packages are offered for companies!"
+
+#: templates/base.html
+msgid "Dünya xəbərləri: Beynəlxalq şirkətlər əmək bazarında mövqelərini gücləndirir."
+msgstr "World news: International companies are strengthening their positions in the labor market."
+
+#: templates/base.html
+msgid "Əməkdaş Şirkətlər"
+msgstr "Partners"
+
+#: templates/base.html
+msgid "Yuxarı"
+msgstr "UP"
+
+#: templates/index.html
+msgid "Kateqoriya üzrə xəbərlər"
+msgstr "Category-wise News"
+
+#: templates/news_detail.html
+msgid "Xəbər Detalları"
+msgstr "News Details"
+
+#: templates/news_detail.html
+msgid "Əvvəlki"
+msgstr "Previous"
+
+#: templates/news_detail.html
+msgid "Növbəti"
+msgstr "Next"
+
+#: templates/news_detail.html
+msgid "Paylaş"
+msgstr "Share"
+
+#: templates/category_list.html
+msgid "Xəbərlər"
+msgstr "News"
+
+#: templates/category_list.html
+msgid "Bu kateqoriyada heç bir xəbər tapılmadı."
+msgstr "No news found in this category."
+
+#: templates/reklam.html
+msgid "Reklam"
+msgstr "Advertisement"
+
+#: templates/reklam.html
+msgid "Elanlar"
+msgstr "Announcements"

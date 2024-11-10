@@ -1,0 +1,206 @@
+/* General Container Styling */
+.container {
+    margin-top: 10px;
+}
+
+/* Header Styling for News Sections */
+.category-news-section h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.section-title a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.section-title a:hover {
+    text-decoration: underline;
+}
+
+/* Ümumi Card Tərtibatı */
+.news-card-base {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container {
+    position: relative;
+    height: 200px; /* Şəklin hündürlüyü */
+}
+
+.card-img-top-base {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Şəkilin card içində tam uyğunlaşması */
+}
+
+/* Şəkil üzərində başlıq */
+.image-title-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Şəffaf qara fon */
+    color: #fff; /* Ağ rəngli başlıq */
+    padding: 5px 10px;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.image-title-overlay a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.image-title-overlay a:hover {
+    color: #ffd700; /* Hover zamanı rəng dəyişimi */
+}
+
+.card-body-base {
+    padding: 10px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #f4f4f4; /* Arxa fon rəngi */
+}
+
+/* Responsivlik üçün uyğunlaşdırma */
+@media (max-width: 768px) {
+    .news-card-base {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .image-container {
+        height: 200px; /* Mobil üçün hündürlük */
+    }
+
+    .card-body-base {
+        padding: 8px;
+    }
+
+    .image-title-overlay {
+        font-size: 1rem;
+    }
+}
+
+/* Additional Hover Effects */
+.card:hover .image-title-overlay {
+    background: rgba(0, 0, 0, 0.8); /* Hover zamanı fon şəffaflığının artırılması */
+}
+
+.card:hover .card-img-top-base {
+    transform: scale(1.02); /* Hover zamanı şəkilin böyüdülməsi */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* News Meta Data Styling */
+.news-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.category-name {
+    font-weight: bold;
+}
+
+/* Responsive Design for Mobile Screens */
+@media (max-width: 576px) {
+    .category-news-section .row .col-md-3, .category-news-section .row .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    .image-container {
+        height: 150px; /* Kiçik ekranlar üçün daha kiçik şəkil */
+    }
+}
+
+/* Custom Hover Effects */
+a {
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+/* Ümumi Card Tərtibatı */
+.news-card-alt {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+
+.image-container-alt {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.card-img-top-alt {
+    width: 100%;
+    height: 250px; /* Şəkilin hündürlüyü */
+    object-fit: cover;
+}
+
+.overlay-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.card-body-alt {
+    padding: 10px;
+    text-align: center;
+}
+
+.card-title-alt {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.card-title-alt a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.card-title-alt a:hover {
+    color: #007bff;
+}
+
+/* Responsivlik üçün uyğunlaşdırma */
+@media (max-width: 768px) {
+    .card-img-top-alt {
+        height: 200px; /* Mobil üçün maksimum hündürlük */
+    }
+}

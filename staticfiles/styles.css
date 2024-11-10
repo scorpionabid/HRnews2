@@ -1,0 +1,317 @@
+/* Ümumi tərtibat */
+body {
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #f4f6f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Header bölməsi */
+header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+header a:hover {
+    color: #0056b3;
+}
+
+.navbar {
+    padding: 0;
+}
+
+.navbar-nav .nav-link {
+    padding: 10px 20px;
+    color: #333;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover, .navbar-nav .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* News Ticker */
+.news-ticker {
+    background-color: #007bff;
+    padding: 10px 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.ticker-wrap {
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.ticker {
+    white-space: nowrap;
+    display: flex;
+    animation: ticker 15s linear infinite;
+}
+
+.ticker-item {
+    padding-right: 50px;
+    color: #fff;
+}
+
+/* Ticker animasiyası */
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Sol Sidebar Kateqoriyalar */
+aside h5 {
+    color: #333;
+    font-size: 1.25rem;
+    margin-bottom: 15px;
+}
+
+aside ul.list-group {
+    padding: 0;
+}
+
+aside ul.list-group-item {
+    background-color: #f9f9f9;
+    color: #007bff;
+    border: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+aside ul.list-group-item:hover {
+    background-color: #e9ecef;
+    color: #0056b3;
+}
+
+/* Əsas Xəbərlər */
+.card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%; /* Kartları bərabər hündürlükdə saxlamaq üçün */
+    display: flex;
+    flex-direction: column;
+}
+
+.card:hover {
+    transform: scale(1.02);
+}
+
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body h5.card-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.card-body p {
+    color: #6c757d;
+    font-size: 0.95rem;
+}
+
+.card-body a {
+    color: #007bff;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.card-body a:hover {
+    color: #0056b3;
+}
+
+/* Pagination */
+.pagination .page-link {
+    color: #007bff;
+    border-color: #ddd;
+}
+
+.pagination .page-link:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+/* Sağ Sidebar: Elanlar */
+aside h5 {
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+aside .card {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+aside .card img {
+    height: 100px;
+    object-fit: cover;
+}
+
+aside .card h5.card-title {
+    font-size: 1.1rem;
+    color: #007bff;
+}
+
+aside .card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Əlavə Xəbərlər */
+.additional-news .card {
+    margin-bottom: 20px;
+}
+
+.additional-news .card img {
+    height: 150px;
+    object-fit: cover;
+}
+
+/* Kateqoriya Bölməsi Çərçivəsi */
+.category-section {
+    border: 2px solid #d9534f; /* Qırmızı çərçivə */
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+}
+
+/* Kateqoriya Başlıq Stili */
+.category-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+/* Kateqoriya Kartları */
+.category-cards .card {
+    margin-bottom: 20px;
+}
+
+.category-cards img {
+    width: 100%;
+    max-height: 150px;
+    object-fit: cover;
+}
+
+/* Daha çox düyməsi üçün */
+.more-link {
+    font-size: 0.9rem;
+    color: #007bff;
+    text-align: center;
+    display: block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+.more-link:hover {
+    color: #0056b3;
+}
+
+/* Əməkdaş Şirkətlərin Logolar
+/* Əməkdaş Şirkətlərin Logoları */
+.partners-section {
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    padding: 40px 0;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+.partners-section h5 {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.partners-section img {
+    max-width: 120px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.partners-section img:hover {
+    filter: grayscale(0);
+    transform: scale(1.05); /* Hover effekti üçün az miqdarda böyüdülmə */
+}
+
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: #fff;
+    padding: 30px 0;
+    text-align: center;
+}
+
+footer p {
+    margin-bottom: 0;
+    font-size: 0.95rem;
+}
+
+footer a {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* Mobil uyğunluq */
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    aside {
+        margin-top: 30px;
+    }
+
+    .news-ticker {
+        font-size: 0.9rem;
+    }
+
+    .partners-section img {
+        max-width: 90px;
+    }
+
+    /* Kateqoriya kartlarını bərabər şəkildə düzün */
+    .category-cards .col-md-3 {
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
