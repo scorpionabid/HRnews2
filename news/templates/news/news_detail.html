@@ -13,7 +13,12 @@
         <div class="col-md-8">
             <h1 class="news-title">{{ news.title }}</h1>
             <p>{{ news.hook }}</p>
-            <img src="{{ news.image.url }}" class="img-fluid" alt="{{ news.title }}">
+            {% if news.image %}
+                <img src="{{ news.image.url }}" class="img-fluid" alt="{{ news.title }}">
+            {% else %}
+                <img src="{% static 'media/news/placeholder.png' %}" class="img-fluid" alt="No image available">
+            {% endif %}
+
             <!-- Burada safe filtresindən istifadə edildi -->
             <p>{{ news.content|custom_strip|safe|default:"" }}</p>
         </div>

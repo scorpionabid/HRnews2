@@ -16,6 +16,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     path('admin/', admin.site.urls),
     # Dil prefiksi ilə işləməyən digər əsas URL-lər burada yerləşdirilə bilər
+    path('ckeditor/', include('ckeditor_uploader.urls')),  # CKEditor üçün yol
 ]
 
 # Dil prefiksini əlavə edən URL nümunələri

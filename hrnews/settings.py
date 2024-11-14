@@ -29,7 +29,7 @@ SECRET_KEY = 'django-insecure-f=0hxn_pin^8h%#5ov9u&)qh-2&ya=ix&%#g^w=y*dyd)5sq(x
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'd919-158-181-45-119.ngrok-free.app', 'localhost', '127.0.0.1', ]
+    'localhost', '127.0.0.1', ]
 
 
 # Application definition
@@ -42,7 +42,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'news',
+    'modeltranslation',
     'ckeditor',
+    'ckeditor_uploader',
+    
 ]
 LOCALE_PATHS = [
     BASE_DIR / 'locale',  # locale faylları üçün qovluq
@@ -145,3 +148,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # CKEditor ilə bağlı ayarlar
 CKEDITOR_UPLOAD_PATH = 'uploads/'  # Burada öz istəyinizə uyğun yol təyin edə bilərsiniz, məsələn 'media/uploads/'
+
+MODELTRANSLATION_TRANSLATION_FILES = (
+    'news.translation',  # Burada `news` tətbiqinizin `translation.py` faylının yerləşdiyi modulu qeyd edin.
+)
+
+NEWS_API_KEY = 'ef6c5936655f4adfb4cb32ef88634f03'

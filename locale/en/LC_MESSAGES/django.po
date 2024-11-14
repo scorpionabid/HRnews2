@@ -76,12 +76,24 @@ msgid "Növbəti"
 msgstr "Next"
 
 #: templates/news_detail.html
+msgid "Son"
+msgstr "End"
+
+#: templates/news_detail.html
+msgid "İlk"
+msgstr "First"
+
+#: templates/news_detail.html
 msgid "Paylaş"
 msgstr "Share"
 
 #: templates/category_list.html
 msgid "Xəbərlər"
 msgstr "News"
+
+#: templates/category_list.html
+msgid "Səhifə"
+msgstr "Page"
 
 #: templates/category_list.html
 msgid "Bu kateqoriyada heç bir xəbər tapılmadı."

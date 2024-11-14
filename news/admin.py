@@ -5,6 +5,8 @@ from django.db.models import Count
 from ckeditor.widgets import CKEditorWidget
 from django import forms
 from PIL import Image
+from modeltranslation.admin import TranslationAdmin
+
 
 # CKEditor ilə xəbər forması
 class NewsForm(forms.ModelForm):
@@ -40,8 +42,9 @@ class CategoryAdmin(admin.ModelAdmin):
         create_default_categories()
 
 # Xəbər modelinin admin interfeysi
-@admin.register(News)
-class NewsAdmin(admin.ModelAdmin):
+# Xəbər modelinin admin interfeysi
+admin.site.register(News)
+class NewsAdmin(TranslationAdmin):
     """Xəbərlərin idarə olunması üçün admin paneli."""
     form = NewsForm
     list_display = ['title', 'category', 'created_at', 'author', 'is_popular', 'view_count']

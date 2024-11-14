@@ -3,6 +3,7 @@ from django.utils.text import slugify
 from django.core.exceptions import ValidationError
 from django.contrib.auth.models import User
 from ckeditor_uploader.fields import RichTextUploadingField
+from django.utils.translation import gettext_lazy as _  # Tərcümə üçün import
 
 # Xəbər limiti - yalnız ən son 100 xəbər saxlanılsın
 NEWS_LIMIT = 100  # Maksimum saxlanacaq xəbər sayı
@@ -68,44 +69,44 @@ class Author(models.Model):
 # Xəbər modeli
 class News(models.Model):
     STATUS_CHOICES = (
-        ('draft', 'Draft'),
-        ('published', 'Published'),
-        ('featured', 'Featured'),
+        ('draft', _('Draft')),  # Tərcümə olunan status seçimi
+        ('published', _('Published')),
+        ('featured', _('Featured')),
     )
 
-    title = models.CharField(max_length=200)  # Başlıq
-    slug = models.SlugField(unique=True, blank=True)  # URL üçün slug
-    subtitle = models.CharField(max_length=200, blank=True)  # Alt başlıq
-    content = RichTextUploadingField()  # CKEditor ilə zəngin mətn sahəsi
-    summary = models.TextField(blank=True)  # Xülasə
-    is_popular = models.BooleanField(default=False)
+    title = models.CharField(max_length=200, verbose_name=_("Başlıq"))  # Başlıq sahəsini tərcümə
+    slug = models.SlugField(unique=True, blank=True, max_length=60)  # URL üçün slug
+    subtitle = models.CharField(max_length=200, blank=True, verbose_name=_("Alt başlıq"))  # Tərcümə olunan alt başlıq
+    content = RichTextUploadingField(verbose_name=_("Məzmun"))  # CKEditor ilə zəngin mətn sahəsi
+    summary = models.TextField(blank=True, verbose_name=_("Xülasə"))  # Tərcümə olunan xülasə
+    is_popular = models.BooleanField(default=False, verbose_name=_("Populyardır"))  # Tərcümə olunan sahə
     # Əlaqələr
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)  # Kateqoriya ilə əlaqə
-    author = models.ForeignKey(Author, on_delete=models.CASCADE)  # Müəllif ilə əlaqə
-    tags = models.ManyToManyField(Tag, blank=True)  # Etiketlər (opsional)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name=_("Kateqoriya"))  # Kateqoriya ilə əlaqə
+    author = models.ForeignKey(Author, on_delete=models.CASCADE, verbose_name=_("Müəllif"))  # Müəllif ilə əlaqə
+    tags = models.ManyToManyField(Tag, blank=True, verbose_name=_("Etiketlər"))  # Tərcümə olunan etiketlər (opsional)
     
     # Media
-    image = models.ImageField(upload_to='news/', blank=True, null=True)  # Şəkil (opsional)
-    video_url = models.URLField(blank=True, null=True)  # Video URL (opsional)
+    image = models.ImageField(upload_to='news/', blank=True, null=True, default='news/placeholder.png', verbose_name=_("Şəkil"))  # Şəkil (opsional)
+    video_url = models.URLField(blank=True, null=True, verbose_name=_("Video URL"))  # Video URL (opsional)
     
     # Meta sahələr
-    meta_title = models.CharField(max_length=200, blank=True)  # Meta başlıq
-    meta_description = models.TextField(blank=True)  # Meta təsviri
-    keywords = models.CharField(max_length=200, blank=True)  # Açar sözlər (opsional)
+    meta_title = models.CharField(max_length=200, blank=True, verbose_name=_("Meta başlıq"))  # Tərcümə olunan meta başlıq
+    meta_description = models.TextField(blank=True, verbose_name=_("Meta təsviri"))  # Tərcümə olunan meta təsviri
+    keywords = models.CharField(max_length=200, blank=True, verbose_name=_("Açar sözlər"))  # Tərcümə olunan açar sözlər
     
     # Status və göstəricilər
-    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft')  # Status
-    view_count = models.PositiveIntegerField(default=0)  # Baxış sayı
-    reading_time = models.PositiveIntegerField(default=0)  # Oxuma müddəti (dəqiqə)
-    is_breaking = models.BooleanField(default=False)  # Çox önəmli xəbər
+    status = models.CharField(max_length=10, choices=STATUS_CHOICES, default='draft', verbose_name=_("Status"))  # Status
+    view_count = models.PositiveIntegerField(default=0, verbose_name=_("Baxış sayı"))  # Tərcümə olunan baxış sayı
+    reading_time = models.PositiveIntegerField(default=0, verbose_name=_("Oxuma müddəti (dəqiqə)"))  # Tərcümə olunan oxuma müddəti
+    is_breaking = models.BooleanField(default=False, verbose_name=_("Çox önəmli xəbər"))  # Tərcümə olunan sahə
     
     # Tarixlər
-    published_at = models.DateTimeField(null=True, blank=True)  # Nəşr tarixi
-    created_at = models.DateTimeField(auto_now_add=True)  # Yaradılma tarixi
-    updated_at = models.DateTimeField(auto_now=True)  # Yenilənmə tarixi
+    published_at = models.DateTimeField(null=True, blank=True, verbose_name=_("Nəşr tarixi"))  # Nəşr tarixi
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name=_("Yaradılma tarixi"))  # Yaradılma tarixi
+    updated_at = models.DateTimeField(auto_now=True, verbose_name=_("Yenilənmə tarixi"))  # Yenilənmə tarixi
 
     class Meta:
-        verbose_name_plural = "News"
+        verbose_name_plural = _("Xəbərlər")
         ordering = ['-published_at']  # Ən son nəşr tarixinə görə sıralama
 
     def save(self, *args, **kwargs):
@@ -119,7 +120,6 @@ class News(models.Model):
 
     def __str__(self):
         return self.title
-
 # Reklam modeli
 class Advertisement(models.Model):
     POSITION_CHOICES = (

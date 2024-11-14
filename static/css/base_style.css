@@ -1,56 +1,64 @@
-/* General Layout */
+/* ======================= General Layout ======================= */
+/* Ümumi veb saytın əsas tərtibat və tərzinə aid ümumi üslublar */
 body {
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif; /* Ümumi şrift */
     background-color: #f4f6f9; /* Ümumi fon rəngi */
     color: #333; /* Yazıların əsas rəngi */
-    margin: 0;
-    padding: 0;
+    margin: 0; /* Default margin ləğv edilir */
+    padding: 0; /* Default padding ləğv edilir */
     line-height: 1.6; /* Ümumi sətir aralığı */
 }
 
+/* Başlıqların stili */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700; /* Başlıqlar üçün qalınlıq */
+    font-family: 'Roboto', sans-serif; /* Başlıqlar üçün fərqli şrift */
+    font-weight: 700; /* Qalınlıq dərəcəsi */
+    margin: 0.5rem 0; /* Başlıqlar üçün yuxarı və aşağı boşluq */
 }
 
+/* Paragraf mətnlər */
 p {
-    font-size: 1rem;
+    font-size: 1rem; /* Mətn ölçüsü */
+    margin: 0.5rem 0; /* Yuxarı və aşağı boşluq */
 }
 
-/* Header Styles */
-/* Ümumi Header Tərtibatı */
+/* ======================= Header Styles ======================= */
 header {
-    padding: 0.5rem 0; /* Yuxarı və alt boşluq */
+    padding: 0.5rem 0; /* Yuxarı və aşağı boşluq */
 }
 
+/* Navbar üslubu */
 header .navbar {
-    display: flex;
+    display: flex; /* Flexbox ilə elementlərin yerləşdirilməsi */
     justify-content: space-between; /* Sol və sağ tərəflərin yayılması */
     align-items: center; /* Elementləri vertikal olaraq mərkəzləşdirmək */
-    padding: 0; /* Navbar içərisindəki boşluğu azaltmaq */
+    padding: 0; /* Navbar içindəki boşluğu sıfırlamaq */
 }
 
-/* Logo */
+/* Loqo bölməsi */
 header .col-md-3 {
-    flex: 0 0 auto; /* Loqonun genişliyini sabit saxlamaq */
-    max-width: 150px; /* Maksimum genişlik */
+    flex: 0 0 auto; /* Sabit ölçülü genişlik */
+    max-width: 150px; /* Maksimum eni */
 }
 
+/* Loqonun ölçüsü */
 header .col-md-3 img {
-    max-width: 100%;
-    height: auto; /* Müxtəlif ekranlarda mütənasib görünüş */
+    max-width: 100%; /* Maksimum eni 100% etmək */
+    height: auto; /* Mütənasib yüksəkliyi saxlamaq */
 }
 
-/* Navigation Links */
+/* ======================= Navigation Links ======================= */
 .navbar {
-    padding: 0; /* Navbar içərisindəki boşluğu azaltmaq */
-    
+    padding: 0; /* Navbar içindəki boşluğu azaltmaq */
 }
+
+/* Loqo bölməsinin margin tənzimlənməsi */
 .logo-section {
-    margin-right: auto;
+    margin-right: auto; /* Sağ tərəfə maksimum yer buraxmaq */
 }
+
 .navbar-nav {
-    display: flex;
+    display: flex; /* Flexbox ilə elementləri yerləşdirmək */
     align-items: center; /* Vertikal mərkəzləşdirmək */
     margin-right: auto; /* Sağdakı elementlərə yer açmaq üçün */
 }
@@ -60,36 +68,39 @@ header .col-md-3 img {
 }
 
 .navbar-nav .nav-link {
-    color: #333;
-    transition: color 0.3s;
-    text-decoration: none;
-    padding: 0.5rem 0.75rem;
+    color: #333; /* Link rəngi */
+    transition: color 0.3s; /* Rəng keçidi */
+    text-decoration: none; /* Alt xəttin olmaması */
+    padding: 0.5rem 0.75rem; /* Linklərin içində boşluq */
 }
 
 .navbar-nav .nav-link:hover {
-    color: #007bff; /* Hover effekti */
+    color: #007bff; /* Hover zamanı rəng dəyişimi */
 }
 
-/* Dropdown Menyular */
+/* Dropdown Menyuların stili */
 .navbar-nav .dropdown-menu {
-    font-size: 0.9rem;
-    padding: 5px 10px;
+    font-size: 0.9rem; /* Mətn ölçüsü */
+    padding: 5px 10px; /* İçəridəki boşluq */
 }
 
-/* Dil Dəyişmə Bölməsi */
-.language-switcher {
-    display: flex;
-    align-items: center;
+/* ======================= Language Switcher ======================= */
+.language-switcher { 
+    display: flex; /* Flexbox ilə elementləri yerləşdirmək */
+    align-items: center; /* Vertikal mərkəzləşdirmək */
+    justify-content: center; /* Mərkəzdə yerləşdirmək */
     font-size: 0.9rem; /* Yazı ölçüsünü kiçikləşdirmək */
+    margin: 0; /* Ümumi marginin sıfırlanması */
+    padding: 0; /* Ümumi paddingin sıfırlanması */
 }
 
 .language-switcher .lang-link {
-    margin: 0 3px; /* AZ və EN arasındakı boşluq */
-    color: #333;
-    text-decoration: none; /* Alt xətt olmadan */
-    padding: 3px 5px;
-    border-radius: 3px;
-    transition: background-color 0.3s, color 0.3s;
+    margin: 0 3px; /* Dil seçimləri arasında boşluq */
+    color: #333; /* Mətn rəngi */
+    text-decoration: none; /* Alt xəttin olmaması */
+    padding: 3px 5px; /* İçəridəki boşluq */
+    border-radius: 3px; /* Küncləri yuvarlaqlaşdırmaq */
+    transition: background-color 0.3s, color 0.3s; /* Keçid effektləri */
 }
 
 .language-switcher .lang-link:hover {
@@ -97,68 +108,86 @@ header .col-md-3 img {
     color: #fff; /* Hover zamanı yazı rəngi */
 }
 
+/* ======================= Mobile Responsive Adjustments ======================= */
+@media (max-width: 768px) {
+    .language-switcher {
+        font-size: 0.8rem; /* Mobil üçün daha kiçik yazı */
+        flex-direction: row; /* Dil seçimlərini horizontal düzülüş */
+    }
+    
+    .language-switcher .lang-link {
+        padding: 2px 4px; /* Mobil üçün daha az padding */
+        margin: 0 2px; /* Mobil üçün daha az margin */
+    }
+}
 
-/* Ümumi Axtarış Forması Dəyişiklikləri */
+/* ======================= Search Form Styles ======================= */
 .form-inline {
-    display: flex;
-    align-items: center;
-    margin: 0;
+    display: flex; /* Flexbox istifadə etmək */
+    align-items: center; /* Elementləri mərkəzləşdirmək */
+    margin: 0; /* Default margin sıfırlanır */
 }
 
 .input-group {
-    display: flex;
-    align-items: center;
+    display: flex; /* Flexbox ilə düzülüş */
+    align-items: center; /* Vertikal mərkəzləşdirmək */
 }
 
 .input-group .form-control-sm {
-    border-right: none; /* Sağ sərhədi aradan qaldırmaq */
+    border-right: none; /* Sağ sərhədi ləğv etmək */
 }
 
 .input-group .btn-sm {
-    margin-left: -1px; /* Input ilə düymə arasında boşluğun aradan qaldırılması */
+    margin-left: -1px; /* Input və düymə arasındakı boşluğu sıfırlamaq */
 }
 
-/* Daha Yığcam Elementlər üçün */
+/* Mobil uyğunluq üçün axtarış forması */
 @media (max-width: 768px) {
     .form-inline {
-        flex-direction: row;
-        align-items: center;
-        width: 100%;
+        flex-direction: row; /* Horizontal düzülüş */
+        align-items: center; /* Mərkəzləşdirmək */
+        width: 100%; /* Tam genişlik */
     }
 
     .form-inline input.form-control-sm {
-        flex: 1;
-        width: auto; /* Eni uyğunlaşdırmaq */
+        flex: 1; /* Tam genişliklə uyğunlaşmaq */
+        width: auto; /* Avtomatik en */
     }
 }
 
-
-/* News Ticker Styles */
+/* ======================= News Ticker Styles ======================= */
 .news-ticker {
-    background-color: #007bff;
-    padding: 5px 0;
-    font-size: 1rem;
-    font-weight: bold;
-    color: #fff;
-    overflow: hidden;
-    white-space: nowrap;
+    background-color: #007bff; /* Fon rəngi */
+    padding: 3px 0; /* Yuxarı və aşağı padding */
+    font-size: 1rem; /* Mətn ölçüsü */
+    font-weight: normal; /* Şrift çəkisi */
+    color: #fff; /* Mətn rəngi */
+    overflow: hidden; /* Sığmayan elementləri gizlətmək */
+    white-space: nowrap; /* Mətnin bir xəttdə göstərilməsi */
+    height: 30px; /* Hündürlük */
+    display: flex; /* Flexbox */
+    align-items: center; /* Vertikal mərkəzləşdirmək */
 }
 
 .ticker-wrap {
-    display: flex;
-    overflow: hidden;
-    height: 80%;
+    display: flex; /* Flexbox */
+    overflow: hidden; /* Sığmayan elementləri gizlətmək */
+    height: auto; /* Avtomatik hündürlük */
 }
 
 .ticker {
-    display: inline-flex;
-    animation: ticker 15s linear infinite;
-    white-space: nowrap;
+    display: inline-flex; /* Inline-flex */
+    animation: ticker 15s linear infinite; /* Animasiya */
+    white-space: nowrap; /* Mətnin bir xəttdə qalması */
 }
 
 .ticker-item {
-    padding-right: 50px;
-    color: #fff;
+    padding-right: 30px; /* Sağdan boşluq */
+    color: #fff; /* Mətn rəngi */
+    text-decoration: none; /* Alt xəttin olmaması */
+    display: flex; /* Flexbox */
+    align-items: center; /* Vertikal mərkəzləşdirmək */
+    height: 40px; /* Hündürlük */
 }
 
 @keyframes ticker {
@@ -170,175 +199,138 @@ header .col-md-3 img {
     }
 }
 
-/* Navbar Mobile Responsive Improvements */
+/* ======================= Navbar Mobile Responsive ======================= */
 @media (max-width: 768px) {
     .navbar-nav {
-        flex-direction: column;
-        align-items: flex-start;
+        flex-direction: column; /* Dikey düzülüş */
+        align-items: flex-start; /* Sol tərəfdə yerləşdirmək */
     }
 
     .navbar-nav .nav-item {
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.5rem; /* Alt boşluq */
     }
 
     .form-inline {
-        margin-top: 0.5rem;
-        width: 100%;
+        margin-top: 0.5rem; /* Yuxarı boşluq */
+        width: 100%; /* Tam genişlik */
     }
 
     .form-inline input.form-control-sm {
-        width: calc(100% - 50px);
+        width: calc(100% - 50px); /* Eni tənzimləmək */
     }
 }
-/* Aside Styles */
+
+/* ======================= Aside Styles ======================= */
 aside h5 {
-    font-size: 1.2rem; /* Başlıq ölçüsünü müəyyənləşdirir */
-    font-weight: bold; /* Başlığı qalınlaşdırır */
-    margin-bottom: 0.75rem; /* Başlıq altındakı boşluğu azaldır */
+    font-size: 1.2rem; /* Başlıq ölçüsü */
+    font-weight: bold; /* Qalınlıq */
+    margin-bottom: 0.75rem; /* Alt boşluq */
 }
 
 .card {
-    border: 1px solid #e0e0e0; /* Kartın kənarlarına incə xətt əlavə edir */
-    border-radius: 5px; /* Küncləri yuvarlaqlaşdırır */
-    overflow: hidden; /* Şəkil və kontent arasındakı keçidi səliqəli etmək üçün */
-    transition: transform 0.2s ease-in-out; /* Hover effekti üçün keçid */
+    border: 1px solid #e0e0e0; /* Kənar sərhəd */
+    border-radius: 5px; /* Künclərin yuvarlaqlaşdırılması */
+    overflow: hidden; /* Kontent sərhədlərini gizlətmək */
+    transition: transform 0.2s ease-in-out; /* Hover üçün keçid */
 }
 
 .card:hover {
-    transform: scale(1.02); /* Hover zamanı kartı böyüdür */
+    transform: scale(1.02); /* Hover zamanı ölçü dəyişməsi */
 }
 
 .card img {
-    max-height: 150px; /* Şəklin maksimum hündürlüyü */
-    object-fit: cover; /* Şəklin konteynerə uyğun şəkildə göstərilməsi */
+    max-height: 150px; /* Maksimum hündürlük */
+    object-fit: cover; /* Şəklin konteynerə uyğunlaşması */
 }
 
 .card-body {
-    padding: 0.5rem; /* Kartın içindəki mətn boşluğunu azaldır */
+    padding: 0.5rem; /* İçəridəki boşluq */
 }
 
 .card-title {
-    font-size: 0.95rem; /* Başlığın ölçüsünü kiçik edir */
-    font-weight: 600; /* Başlığı qalınlaşdırır */
+    font-size: 0.95rem; /* Başlıq ölçüsü */
+    font-weight: 600; /* Qalınlıq */
 }
 
 .card-title a {
-    color: #333; /* Linkin rəngi */
-    text-decoration: none; /* Alt xətti aradan qaldırır */
+    color: #333; /* Link rəngi */
+    text-decoration: none; /* Alt xəttin olmaması */
 }
 
 .card-title a:hover {
-    color: #007bff; /* Hover zamanı link rəngini dəyişir */
-    text-decoration: underline; /* Hover zamanı alt xətt əlavə edir */
+    color: #007bff; /* Hover zamanı rəng dəyişməsi */
+    text-decoration: underline; /* Hover zamanı alt xətt */
 }
 
 .card-text {
-    font-size: 0.85rem; /* Mətni kiçik edir */
-    color: #6c757d; /* Yazının solğun rəngi */
+    font-size: 0.85rem; /* Mətn ölçüsü */
+    color: #6c757d; /* Solğun rəng */
 }
 
-
-
-/* Footer Styles */
+/* ======================= Footer Styles ======================= */
 footer {
-    background-color: #343a40;
-    color: #fff;
-    padding: 30px 0;
-    text-align: center;
+    background-color: #343a40; /* Fon rəngi */
+    color: #fff; /* Mətn rəngi */
+    padding: 30px 0; /* Yuxarı və aşağı padding */
+    text-align: center; /* Mərkəzləşdirmək */
 }
 
 footer p {
-    margin-bottom: 0;
-    font-size: 0.95rem;
+    margin-bottom: 0; /* Alt boşluq */
+    font-size: 0.95rem; /* Mətn ölçüsü */
 }
 
 footer a {
-    color: #fff;
-    transition: all 0.3s ease;
+    color: #fff; /* Link rəngi */
+    transition: all 0.3s ease; /* Keçid effekti */
 }
 
 footer a:hover {
-    color: #007bff;
+    color: #007bff; /* Hover zamanı rəng dəyişməsi */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .navbar-nav {
-        text-align: center;
-    }
-
-    .language-switcher, .form-inline {
-        margin-top: 10px;
-    }
-}
-
-/* Additional Styles and Performance Considerations */
-/* Card Styles 
-.card {
-    border: none;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    border-radius: 8px;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    height: 200px;
-    object-fit: cover;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-}
-
-/* Animasiya Effektləri */
-.card-title a:hover {
-    color: #007bff;
-}
-
-/* Partners Section */
+/* ======================= Partners Section ======================= */
 .partners-section {
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-    padding: 1.5rem 0; /* Üst və alt boşluğu bir qədər azaltmaq */
-    margin-top: 10px; /* Üst margin bir qədər azaldılır */
+    background-color: #fff; /* Fon rəngi */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); /* Kölgə */
+    padding: 1.5rem 0; /* Yuxarı və aşağı padding */
+    margin-top: 10px; /* Yuxarı margin */
+    text-align: center; /* Mərkəzləşdirmək */
 }
 
 .partners-section h5 {
-    font-size: 1,5rem;
-    margin-bottom: 20px; /* Başlıq altındakı boşluğu bir qədər azaldırıq */
-    text-align: center;
+    font-size: 1.5rem; /* Başlıq ölçüsü */
+    margin-bottom: 20px; /* Alt boşluq */
 }
 
 .partners-section img {
-    max-height: 60px; /* Maksimum hündürlüyü azaldırıq */
-    max-width: 80%; /* Eni konteynerə uyğunlaşdırırıq */
-    height: auto; /* Mütənasib ölçü saxlanılır */
-    filter: grayscale(100%);
-    transition: filter 0.3s ease, transform 0.3s ease; /* Hover üçün keçid effekti əlavə olunur */
+    max-height: 60px; /* Maksimum hündürlük */
+    max-width: 80%; /* Maksimum genişlik */
+    height: auto; /* Mütənasib ölçü */
+    filter: grayscale(100%); /* Solğunlaşdırma */
+    transition: filter 0.3s ease, transform 0.3s ease; /* Keçid effekti */
 }
 
 .partners-section img:hover {
-    filter: grayscale(0);
-    transform: scale(1.05); /* Hover zamanı kiçik böyütmə effekti */
+    filter: grayscale(0); /* Hover zamanı solğunluğun aradan qaldırılması */
+    transform: scale(1.05); /* Hover zamanı ölçünün böyüdülməsi */
 }
 
 .partners-section .col-md-2,
 .partners-section .col-6 {
-    margin-bottom: 0.5rem; /* Alt boşluğu azaldırıq */
+    margin-bottom: 0.5rem; /* Alt boşluq */
 }
 
-
-@media (max-width: 768px) { /* Mobil cihazlar üçün media sorğusu */
+/* ======================= Mobile Aside Styles ======================= */
+@media (max-width: 768px) {
     aside .list-group-item {
-        padding: 0.5rem 0.75rem; /* Hündürlüyü azaltmaq üçün padding dəyəri */
-        font-size: 0.875rem; /* Yazı ölçüsünü azaltmaq */
-        line-height: 1.2; /* Sətir hündürlüyünü azaltmaq */
+        padding: 0.5rem 0.75rem; /* İçəridəki padding */
+        font-size: 0.875rem; /* Yazı ölçüsü */
+        line-height: 1.2; /* Sətir hündürlüyü */
     }
 
     aside h5 {
-        font-size: 1rem; /* Başlıq yazısının ölçüsünü azaltmaq */
-        margin-bottom: 0.5rem; /* Alt boşluğu azaltmaq */
+        font-size: 1rem; /* Başlıq ölçüsü */
+        margin-bottom: 0.5rem; /* Alt boşluq */
     }
 }
