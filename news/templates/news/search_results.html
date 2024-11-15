@@ -1,0 +1,21 @@
+{% extends "news/base.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block content %}
+    <h1>{% trans "Axtarış Nəticələri" %}</h1>
+    {% if query %}
+        <p>{% trans "Axtarış Sorğusu" %}: {{ query }}</p>
+        {% if search_results %}
+            <ul>
+                {% for result in search_results %}
+                    <li><a href="{% url 'news_detail' result.slug %}">{{ result.title }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>{% trans "Heç bir nəticə tapılmadı." %}</p>
+        {% endif %}
+    {% else %}
+        <p>{% trans "Zəhmət olmasa axtarış sorğusunu daxil edin." %}</p>
+    {% endif %}
+{% endblock %}

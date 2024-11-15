@@ -2,12 +2,13 @@ import requests
 from .models import News, Category, Author
 from django.utils.text import slugify
 from datetime import datetime
-from django.utils import timezone  # Added for timezone support
+from django.utils import timezone  # Zaman zonası dəstəyi üçün
 from django.conf import settings
 from django.core.files import File
 from urllib.request import urlopen
 from tempfile import NamedTemporaryFile
 import os
+import pytz
 
 # API açarı və URL
 API_KEY = settings.NEWS_API_KEY
@@ -72,7 +73,7 @@ def fetch_and_store_news(query, category_slug, category_name):
             # Zaman zonası məlumatını tətbiq edin
             try:
                 published_at = datetime.strptime(article['publishedAt'], "%Y-%m-%dT%H:%M:%SZ")
-                published_at = published_at.replace(tzinfo=timezone.utc)  # Zaman zonası əlavə edilir
+                published_at = published_at.replace(tzinfo=pytz.UTC)  # Zaman zonası əlavə edilir
             except Exception as e:
                 print(f"Tarix formatlama zamanı xəta: {e}")
                 published_at = timezone.now()  # Fallback olaraq indiki zaman istifadə edilir

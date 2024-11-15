@@ -65,3 +65,17 @@ def my_view(request):
     return render(request, 'news/my_view.html', {
         'page_obj': page_obj
     })
+
+
+def search_view(request):
+    query = request.GET.get('q', '')
+    search_results = []
+
+    if query:
+        search_results = News.objects.filter(title__icontains=query)  # You can customize this filter based on your needs
+
+    context = {
+        'query': query,
+        'search_results': search_results,
+    }
+    return render(request, 'news/search_results.html', context)

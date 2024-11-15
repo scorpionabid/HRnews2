@@ -111,7 +111,7 @@ header .col-md-3 img {
 /* ======================= Mobile Responsive Adjustments ======================= */
 @media (max-width: 768px) {
     .language-switcher {
-        font-size: 0.8rem; /* Mobil üçün daha kiçik yazı */
+        font-size: 0.7rem; /* Mobil üçün daha kiçik yazı */
         flex-direction: row; /* Dil seçimlərini horizontal düzülüş */
     }
     
